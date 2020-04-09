@@ -1,2 +1,2 @@
-# Responsive-Navigation-widh-Submenus
+# Responsive-Navigation-width-Submenus
 Responsive navigation
