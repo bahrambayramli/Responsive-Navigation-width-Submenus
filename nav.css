@@ -87,7 +87,12 @@ body header .sticky-case .navigation .nav-list {
           flex-direction: column;
 }
 
-body header .sticky-case .navigation .nav-list .nav-li a {
+body header .sticky-case .navigation .nav-list .nav-li {
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
+}
+
+body header .sticky-case .navigation .nav-list .nav-li .nav-link {
   display: inline-block;
   width: 90%;
   color: #736CED;
@@ -96,12 +101,12 @@ body header .sticky-case .navigation .nav-list .nav-li a {
   transition: all .2s linear;
 }
 
-body header .sticky-case .navigation .nav-list .nav-li:hover a {
+body header .sticky-case .navigation .nav-list .nav-li:hover .nav-link {
   color: #ffffff;
   padding-left: 2rem;
 }
 
-body header .sticky-case .navigation .nav-list .nav-li:hover a .drop-down-list {
+body header .sticky-case .navigation .nav-list .nav-li:hover .nav-link .drop-down-list {
   display: block;
 }
 
@@ -112,6 +117,11 @@ body header .sticky-case .navigation .nav-list .nav-li:hover {
 body header .sticky-case .navigation .nav-list .nav-li svg {
   display: inline;
   color: #736CED;
+  font-size: 1rem;
+}
+
+body header .sticky-case .navigation .nav-list .nav-li:hover svg {
+  color: #ffffff;
 }
 
 body header .sticky-case .navigation .nav-list .nav-li .drop-down-list {
@@ -125,15 +135,24 @@ body header .sticky-case .navigation .nav-list .nav-li .drop-down-list {
   -webkit-transition: 200ms ease;
   transition: 200ms ease;
   border-radius: 2px;
-  background-color: lightyellow;
+  background-color: #ffffff;
   z-index: 2;
+  border-bottom: 3px solid #736CED;
 }
 
 body header .sticky-case .navigation .nav-list .nav-li .drop-down-list li a {
   display: block;
   padding: 1rem;
-  padding-left: 1.3rem;
+  padding-left: 2rem;
   font-size: 1rem;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+
+body header .sticky-case .navigation .nav-list .nav-li .drop-down-list li:hover a {
+  background-color: #736CdD;
+  color: #ffffff;
+  padding-left: 2.2rem;
 }
 
 body header .sticky-case .navigation .nav-list .nav-li .drop-down-list-active {
@@ -141,6 +160,8 @@ body header .sticky-case .navigation .nav-list .nav-li .drop-down-list-active {
   position: relative;
   top: 100;
   left: 0;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
   visibility: visible;
   opacity: 1;
   filter: alpha(opacity=100);
@@ -148,8 +169,9 @@ body header .sticky-case .navigation .nav-list .nav-li .drop-down-list-active {
 
 body header .sticky-case .activate-mb {
   display: block;
-  width: 100%;
+  width: 90%;
   background-color: #ffffff;
+  border-radius: 5px;
 }
 
 body header .sticky-case .nav-toogle {
@@ -229,7 +251,7 @@ body header .sticky-case .nav-toogle a {
     display: block;
     position: relative;
   }
-  body header .sticky-case .navigation .nav-list .nav-li a {
+  body header .sticky-case .navigation .nav-list .nav-li .nav-link {
     padding: 1.2rem;
     display: block;
     width: 100%;
@@ -241,12 +263,12 @@ body header .sticky-case .nav-toogle a {
     color: black;
     background-color: #ffffff;
   }
-  body header .sticky-case .navigation .nav-list .nav-li a:hover {
+  body header .sticky-case .navigation .nav-list .nav-li:hover .nav-link {
     color: #ffffff;
+    padding: 1.2rem !important;
     background-color: #736CED;
-    padding: 1.2rem;
   }
-  body header .sticky-case .navigation .nav-list .nav-li a:hover .drop-down-list {
+  body header .sticky-case .navigation .nav-list .nav-li:hover .nav-link .drop-down-list {
     display: block;
   }
   body header .sticky-case .navigation .nav-list .nav-li .drop-down-list {
@@ -260,12 +282,22 @@ body header .sticky-case .nav-toogle a {
     -webkit-transition: 200ms ease;
     transition: 200ms ease;
     border-radius: 2px;
+    background-color: #ffffff;
   }
   body header .sticky-case .navigation .nav-list .nav-li .drop-down-list li a {
     display: block;
-    padding: 1rem;
-    padding-left: 1.5rem;
+    padding: 1.2rem;
     font-size: .9rem;
+    color: #736CED;
+    -webkit-transition: color 0.3s linear;
+    transition: color 0.3s linear;
+    -webkit-transition: background-color 0.3s linear;
+    transition: background-color 0.3s linear;
+    background-color: #ffffff;
+  }
+  body header .sticky-case .navigation .nav-list .nav-li .drop-down-list li a:hover {
+    color: #ffffff;
+    background-color: #736CED;
   }
   body header .sticky-case .navigation .nav-list .nav-li:hover .drop-down-list {
     display: block;
@@ -276,9 +308,8 @@ body header .sticky-case .nav-toogle a {
     opacity: 1;
     filter: alpha(opacity=100);
   }
-  body header .sticky-case .navigation .nav-list .nav-li ::after {
-    content: "";
-    display: block;
+  body header .sticky-case .navigation .nav-list .nav-li svg {
+    display: none;
   }
   body header .sticky-case .nav-toogle {
     display: none;
