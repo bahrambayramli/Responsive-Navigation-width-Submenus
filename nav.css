@@ -272,7 +272,7 @@ body header .sticky-case .nav-toogle a {
     display: block;
   }
   body header .sticky-case .navigation .nav-list .nav-li .drop-down-list {
-    width: 300%;
+    width: 310%;
     position: absolute;
     left: 0;
     z-index: 1;
@@ -281,12 +281,12 @@ body header .sticky-case .nav-toogle a {
     filter: alpha(opacity=0);
     -webkit-transition: 200ms ease;
     transition: 200ms ease;
-    border-radius: 2px;
     background-color: #ffffff;
+    border-bottom: none;
   }
   body header .sticky-case .navigation .nav-list .nav-li .drop-down-list li a {
     display: block;
-    padding: 1.2rem;
+    padding: 1rem;
     font-size: .9rem;
     color: #736CED;
     -webkit-transition: color 0.3s linear;
@@ -304,6 +304,7 @@ body header .sticky-case .nav-toogle a {
     position: absolute;
     top: 100;
     left: 0;
+    border-radius: 5px;
     visibility: visible;
     opacity: 1;
     filter: alpha(opacity=100);

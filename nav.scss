@@ -242,7 +242,7 @@ body {
                             }
 
                             .drop-down-list {
-                                width: 300%;
+                                width: 310%;
                                 position: absolute;
                                 left: 0;
                                 z-index: 1;
@@ -250,13 +250,13 @@ body {
                                 opacity: 0;
                                 filter: alpha(opacity=0);
                                 transition: 200ms ease;
-                                border-radius: 2px;
                                 background-color: #ffffff;
+                                border-bottom: none;
 
                                 li {
                                     a {
                                         display: block;
-                                        padding: 1.2rem;
+                                        padding: 1rem;
                                         font-size: .9rem;
                                         color: #736CED;
                                         transition: color 0.3s linear;
@@ -277,7 +277,7 @@ body {
                                     position: absolute;
                                     top: 100;
                                     left: 0;
-
+                                    border-radius: 5px;
                                     visibility: visible;
                                     opacity: 1;
                                     filter: alpha(opacity=100);
